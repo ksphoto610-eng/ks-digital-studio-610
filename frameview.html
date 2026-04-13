@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Frames Collection</title>
+
+<style>
+body {
+    margin: 0;
+    font-family: Arial, sans-serif;
+    background: linear-gradient(135deg, #ff9a9e, #fad0c4);
+}
+
+/* Heading */
+h1 {
+    text-align: center;
+    padding: 20px;
+    color: #333;
+}
+
+/* Grid */
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+    gap: 20px;
+    padding: 20px;
+}
+
+/* Card */
+.card {
+    background: #fff;
+    border-radius: 15px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.2);
+    overflow: hidden;
+    cursor: pointer;
+    transition: 0.3s;
+}
+
+.card:hover {
+    transform: scale(1.05);
+}
+
+/* Image */
+.card img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+}
+
+/* Content */
+.card-content {
+    padding: 15px;
+    text-align: center;
+}
+
+.card-content h3 {
+    margin: 10px 0;
+}
+
+.price {
+    color: #ff4d4d;
+    font-weight: bold;
+}
+</style>
+
+</head>
+
+<body>
+
+<h1>Our Frames Collection</h1>
+
+<div class="gallery">
+
+    <div class="card" onclick="order('6x4 Frame - ₹180')">
+        <img src="frame.jpg">
+        <div class="card-content">
+            <h3>6x4 Frame Size</h3>
+            <p class="price">₹180</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('6x8 Frame - ₹200')">
+        <img src="6x4.jpg">
+        <div class="card-content">
+            <h3>6x8 Frame Size</h3>
+            <p class="price">₹200</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('8x10 Frame - ₹300')">
+        <img src="8x10.jpg">
+        <div class="card-content">
+            <h3>8x10 Frame Size</h3>
+            <p class="price">₹300</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('8x12 Frame - ₹350')">
+        <img src="8x12.jpg">
+        <div class="card-content">
+            <h3>8x12 Frame Size</h3>
+            <p class="price">₹350</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('15x10 Frame - ₹550')">
+        <img src="15x10.jpg">
+        <div class="card-content">
+            <h3>15x10 Frame Size</h3>
+            <p class="price">₹550</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('12x18 Frame - ₹650')">
+        <img src="12x18.jpg">
+        <div class="card-content">
+            <h3>12x18 Frame Size</h3>
+            <p class="price">₹650</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('10x30 Frame - ₹849')">
+        <img src="10x30.jpg">
+        <div class="card-content">
+            <h3>10x30 Frame Size</h3>
+            <p class="price">₹849</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('16x24 Frame - ₹1399')">
+        <img src="16x24.jpg">
+        <div class="card-content">
+            <h3>16x24 Frame Size</h3>
+            <p class="price">₹1399</p>
+        </div>
+    </div>
+
+    <div class="card" onclick="order('20x36 Frame - ₹1499')">
+        <img src="20x36.jpg">
+        <div class="card-content">
+            <h3>20x36 Frame Size</h3>
+            <p class="price">₹1499</p>
+        </div>
+    </div>
+
+</div>
+
+<script>
+function order(product) {
+    var message = "Hi, I want to order: " + product;
+    var url = "https://wa.me/916374613428?text=" + encodeURIComponent(message);
+    window.open(url, '_blank');
+}
+</script>
+
+</body>
+</html>
